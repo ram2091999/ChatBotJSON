@@ -208,11 +208,19 @@
               }
             }
           },
+<<<<<<< HEAD
           "Fans": {
             "name": "Select Solar Water Heater",
             "key": 2,
             "type": "list",
             "elements": ["Ceiling fans", "Table fans", "Pedestal fans", "Wall fans", "Exhaust fans", "Change product", "Main menu"]
+=======
+          "Fans":{
+            "name":"Select Fan",
+            "key":2,
+            "type":"list",
+            "elements":["Ceiling fans","Table fans","Pedestal fans","Wall fans","Exhaust fans","Change product","Main menu"]
+>>>>>>> b235be341c512ce5c90d38cc8680e246b0167f45
 
           },
           "Solar Water Heater": {
