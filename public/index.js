@@ -36,9 +36,11 @@ sendButton.addEventListener("click", function() {
 
 
 function myFunction(str,key){
+  if(str.toLowerCase()!="Contact us".toLowerCase()){
   flow = [...new Set(flow)];
   console.log(key);
   key=Number(key);
+
   // console.log(key);
   // for(var i=0;i<flow.length;i++){
   //   flow[key]=str;
@@ -53,10 +55,17 @@ function myFunction(str,key){
     }
 
   }
-  //flow.push(str);
+  if(str.toLowerCase()=="Main menu".toLowerCase())
+  flow=[];
+  if(str.toLowerCase()=="change product".toLowerCase()||str.toLowerCase()=="change model".toLowerCase())
+  {flow.pop();
+   flow.pop();}
   console.log(flow);
   ajax(flow);
-
+}
+else{
+  contactus();
+}
 }
 
 function ajax(flow){
@@ -81,5 +90,17 @@ function ajax(flow){
       main.innerHTML+=current;
     }
   });
+
+}
+
+function contactus(){
+  let str=`
+  Email:customercare@venushomeappliances.com / enquiry@venushomeappliances.com,
+  Address:Hey hi, You can visit us at No. 4/993, Kamaraj St, Rajiv Gandhi Salai(OMR), Kottivakkam, Perungudi Post, Chennai-600096, India…
+  Phone: 081 4466 6999, +91-044 - 43401515,
+  Website:https://www.venushomeappliances.com.`;
+  main.innerHTML+=str;
+  flow=[];
+  ajax(flow);
 
 }
