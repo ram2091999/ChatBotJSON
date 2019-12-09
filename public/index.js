@@ -9,8 +9,9 @@ let flow = [];
 
 sendButton.addEventListener("click", function() {
   $.ajax({
-    url: "getElement.js",
+    url: "getElement",
     data: { flow: JSON.stringify(flow) },
+    type: "POST",
     success: function(result) {
       flow.push(result);
       let current = `<div> 
@@ -18,13 +19,13 @@ sendButton.addEventListener("click", function() {
             <p>${result["description"]}</p>
             <ul>`;
 
-      //   if (result["type"] == "list") {
-      //     result["element"].forEach(ele => current += `<li>${ele}</li>`);
-      //   }
+      if (result["type"] == "list") {
+        result["elements"].forEach(ele => (current += `<li>${ele}</li>`));
+      }
 
       current += "</ul></div>";
 
-      main.appendChild(current);
+      main.innerHTML += current;
     }
   });
 });
