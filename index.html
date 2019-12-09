@@ -1,26 +1,49 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Hello world</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   <body>
-      <ul class="list-group" id="message-box" >
+    <div id="main">
+      <ul class="list-group" id="message-box">
         <li>
-          <h5>Bot:</h5>
           <p>Hey There! What can I do for you?</p>
+          <p>Please Enter your Name</p>
         </li>
       </ul>
-      <div class="active-element">
-
+      <div class="active-element"></div>
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Name"
+          aria-label="Username"
+          aria-describedby="basic-addon1"
+        />
+        <button
+          type="button"
+          class="btn btn-primary"
+          id="send-button"
+          value="submit"
+        >
+          Send
+        </button>
       </div>
-      <div class="input-box">
-        <div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Your message" id="message"  aria-describedby="basic-addon2">
-   <button type="button" id="send-button" class="btn btn-outline-primary" name="button">Send</button>
-</div>
-      </div>
-      <script src="index.js" charset="utf-8"></script>
+    </div>
+    <script src="index.js" charset="utf-8"></script>
   </body>
 </html>
