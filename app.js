@@ -1,21 +1,30 @@
 //jshint esversion:6
 
-const express=require("express");
-const bodyParser=require("body-parser");
-const path=require("path");
-const app=express();
-const fs = require('fs');
+const express = require("express");
+const bodyParser = require("body-parser");
+const path = require("path");
+const app = express();
+const fs = require("fs");
 let rawdata = fs.readFileSync(path.resolve(__dirname, "./public/data.json"));
+<<<<<<< HEAD
 
+=======
+let data = JSON.parse(rawdata);
+data = data["services offered"];
+console.log(data);
+>>>>>>> df639421eb5c3e189b586fd06db52528ddce74c5
 
-app.use(bodyParser.urlencoded({
+app.use(
+  bodyParser.urlencoded({
     extended: true
-}));
-app.use(express.static(path.join(__dirname, 'public')));
+  })
+);
+app.use(express.static(path.join(__dirname, "public")));
 
-app.get("/",function(req,res){
-    res.sendFile(path.join(__dirname+'/index.html'));
+app.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname + "/index.html"));
 });
+
 
 
 app.post("/getElement",function(req,res){
@@ -24,16 +33,11 @@ app.post("/getElement",function(req,res){
   console.log(data);
   for(var i=0;i<array.length;i++){
     data=data["flow"][array[i]];
+
   }
   res.send(data);
 });
 
-
-
-
-
-
-
-app.listen(3000,function(){
+app.listen(3000, function() {
   console.log("Listening in port 3000");
 });
