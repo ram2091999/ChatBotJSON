@@ -2,14 +2,23 @@
 
 const messageUL = document.getElementById("message-box");
 const activeElement = document.getElementById("active-element");
-const input = document.getElementById("input-box");
 const sendButton = document.getElementById("send-button");
 const main = document.getElementById("main");
+const input = document.getElementById('inputText');
 let flow = [];
+let start = false;
 
 sendButton.addEventListener("click", function () {
 	const inputText = document.getElementById('inputText').value;
-	if (inputText != "") {
+	if (!start && inputText != "") {
+		main.innerHTML += `<div class="m-3 p-1" style="position:absolute; right: 2%;display:inline;border: 1px solid black;border-radius:20px;border-bottom-right-radius:1px;background-color: #3b5998;color:#fff"> 
+		<h4> ${inputText} </h4></div><br><br>
+		<div class="m-3 p-1" style="position:absolute; left: 2%;display:inline;border: 1px solid black;border-radius:20px;border-bottom-left-radius:1px;background-color: #3b5998;color:#fff">
+        <h4>hello ${inputText}</h4>
+	    </div><br><br><br><br>`;
+		start = true;
+		ajax(flow);
+	} else if (inputText != "") {
 		let regexValue = inputText.replace(/-|\s/g, "");
 		console.log(regexValue);
 		if (regexValue.toLowerCase() == "servicerequest") {
@@ -32,11 +41,12 @@ sendButton.addEventListener("click", function () {
 			flow.push("Other");
 			ajax(flow);
 		}
-		main.innerHTML += `<div class="m-3 p-3" style="display:inline;float:right;border: 1px solid black;border-radius:15px;border-bottom-right-radius:1px;background-color: #3b5998;color:#fff"> <h4> ${inputText} </h4></div><br><br>`;
+		main.innerHTML += `<div class="m-3 p-1" style="position:absolute; right: 2%;display:inline;border: 1px solid black;border-radius:20px;border-bottom-right-radius:1px;background-color: #3b5998;color:#fff"> <h4> ${inputText} </h4></div><br><br>`;
 	} else {
 		flow = [];
 		ajax(flow);
 	}
+	input.value = "";
 });
 
 function myFunction(str, key) {
