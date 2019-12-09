@@ -23,7 +23,7 @@ sendButton.addEventListener("click", function() {
 
 
         if (result["type"] == "list") {
-          result["elements"].forEach(ele => current += `<li><button class="btn btn-outline-secondary" onclick="myFunction('${ele}')" >${ele}</button></li>`);
+          result["elements"].forEach(ele => current += `<li><button class="btn btn-outline-secondary" onclick="myFunction('${ele}','0')" >${ele}</button></li>`);
         }
 
       current += "</ul></div>";
@@ -35,10 +35,25 @@ sendButton.addEventListener("click", function() {
 });
 
 
-function myFunction(str){
+function myFunction(str,key){
   flow = [...new Set(flow)];
+  console.log(key);
+  key=Number(key);
+  // console.log(key);
+  // for(var i=0;i<flow.length;i++){
+  //   flow[key]=str;
+  //   if(i>key){
+  //     flow.splice(i,1);
+  //   }
+  // }
+  flow[key]=str;
+  if(flow.length-1>key){
+    for(var i=key+1;i<flow.length;i++){
+      flow.splice(i,1);
+    }
 
-  flow.push(str);
+  }
+  //flow.push(str);
   console.log(flow);
   ajax(flow);
 
@@ -51,13 +66,14 @@ function ajax(flow){
     type:"POST",
     success: function(result) {
       // flow.push(result);
+      console.log(result);
       let current = `<div>
             <h2>${result["name"]}</h2>
 
             <ul>`;
 
         if (result["type"] == "list") {
-          result["elements"].forEach(ele => current += `<li><button class="btn btn-outline-secondary" onclick="myFunction('${ele}')" >${ele}</button></li>`);
+          result["elements"].forEach(ele => current += `<li><button class="btn btn-outline-secondary" onclick="myFunction('${ele}','${result.key}')" >${ele}</button></li>`);
         }
 
       current += "</ul></div>";

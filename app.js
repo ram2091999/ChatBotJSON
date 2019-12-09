@@ -6,13 +6,9 @@ const path = require("path");
 const app = express();
 const fs = require("fs");
 let rawdata = fs.readFileSync(path.resolve(__dirname, "./public/data.json"));
-<<<<<<< HEAD
 
-=======
-let data = JSON.parse(rawdata);
-data = data["services offered"];
-console.log(data);
->>>>>>> df639421eb5c3e189b586fd06db52528ddce74c5
+
+
 
 app.use(
   bodyParser.urlencoded({
