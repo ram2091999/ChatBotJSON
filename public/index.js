@@ -8,32 +8,35 @@ const main = document.getElementById("main");
 let flow = [];
 
 sendButton.addEventListener("click", function () {
-	$.ajax({
-		url: "getElement",
-		data: {
-			flow: JSON.stringify(flow)
-		},
-
-		type: "POST",
-
-		success: function (result) {
-			// flow.push(result);
-			let current = `<div class="list-group-item">
-			<h4>${result["name"]}</h4>
-			<p>${result["description"]}</p>
-			<ul>`;
-
-
-			if (result["type"] == "list") {
-				result["elements"].forEach(ele => current += `<li  style="display:inline;margin:1px;"><button class="btn btn-outline-secondary" onclick="myFunction('${ele}','0')" >${ele}</button></li>`);
-			}
-
-			current += "</ul></div>";
-
-			main.innerHTML += current;
-
+	const inputText = document.getElementById('inputText').value;
+	if (inputText != "") {
+		let regexValue = inputText.replace(/-|\s/g, "");
+		console.log(regexValue);
+		if (regexValue.toLowerCase() == "servicerequest") {
+			flow = [];
+			flow.push("Service Request");
+			ajax(flow);
+		} else if (regexValue.toLowerCase() == "installation") {
+			flow = [];
+			flow.push("Installation");
+			ajax(flow);
+		} else if (regexValue.toLowerCase() == "pendingrequeststatus") {
+			flow = [];
+			flow.push("Pending Request Status");
+			ajax(flow);
+			renderFormPending();
+		} else if (regexValue.toLowerCase() == "contactus" || regexValue.toLowerCase() == "contact") {
+			contactus();
+		} else if (regexValue.toLowerCase() == "other" || regexValue.toLowerCase() == "others") {
+			flow = [];
+			flow.push("Other");
+			ajax(flow);
 		}
-	});
+		main.innerHTML += `<div class="m-3 p-3" style="display:inline;float:right;border: 1px solid black;border-radius:15px;border-bottom-right-radius:1px;background-color: #3b5998;color:#fff"> <h4> ${inputText} </h4></div><br><br>`;
+	} else {
+		flow = [];
+		ajax(flow);
+	}
 });
 
 function myFunction(str, key) {
@@ -141,5 +144,4 @@ function contactus() {
 	main.innerHTML += str;
 	flow = [];
 	ajax(flow);
-
 }
