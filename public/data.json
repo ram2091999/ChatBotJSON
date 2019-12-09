@@ -1,342 +1,341 @@
 {
-"services offered":{
-    "name":"Main menu",
-    "key":0,
-    "type":"list",
-    "elements":["Service Request","Installation","Pending Request Status","Contact Us","Other"],
-    "description":["Request for a service of your appliance.","Raise an installation request for your appliance.","Get the details of your pending requests","Want to get in touch with us? Know how to reach us.","Need something Else? We would love to hear from you."],
-    "flow":{
-    "Service Request":{
-      "name":"Select a product",
-      "key":1,
-      "type":"list",
-      "elements":["Water Heater","Fans","Solar Water Heater","Heat Pump water heater","Other","Main Menu"],
-      "flow":{
-        "Water Heater":{
-          "name":"Select a water Heater",
-          "key":2,
-          "type":"list",
-          "elements":["Splash GI","Magma GV","Lyra","Splash Copper","Calora","Lava","Other","Change product","Main Menu"],
-          "flow":{
-            "Splash GI":{
-            "name":"Select capacity",
-            "key":3,
-            "type":"list",
-            "elements":[1,3,6,10,15,25,"Other","Change Model","Main Menu"]
-          },
-          "Magma GV":{
-            "name":"Select capacity",
-            "key":3,
-            "type":"list",
-            "elements":[1,3,6,10,15,25,"Other","Change Model","Main Menu"]
-
-          },
-          "Lyra":{
-            "name":"Select capacity",
-            "key":3,
-            "type":"list",
-            "elements":[1,3,6,10,15,25,"Other","Change Model","Main Menu"]
-
-          },
-          "Splash Copper":{
-            "name":"Select capacity",
-            "key":3,
-            "type":"list",
-            "elements":[1,3,6,10,15,25,"Other","Change Model","Main Menu"]
-
-          },
-          "Calora":{
-            "name":"Select capacity",
-            "key":3,
-            "type":"list",
-            "elements":[1,3,6,10,15,25,"Other","Change Model","Main Menu"]
-
-          },
-          "Lava":{
-            "name":"Select capacity",
-            "key":3,
-            "type":"list",
-            "elements":[1,3,6,10,15,25,"Other","Change Model","Main Menu"]
-
-          }
-          }
-        },
-        "Fans":{
-          "name":"Select Solar Water Heater",
-          "key":2,
-          "type":"list",
-          "elements":["Ceiling fans","Table fans","Pedestal fans","Wall fans","Exhaust fans","Change product","Main menu"]
-
-        },
-        "Solar Water Heater":{
-          "name":"Select Solar Water Heater",
-          "key":2,
-          "type":"list",
-          "elements":["Domestic solar water heater","Commertial solar water heater","Change product","Main Menu"],
-          "flow":{
-            "Domestic solar water heater":{
-              "name":"Select capacity",
-              "key":3,
-              "type":"list",
-              "elements":[100,200,500,">500","Change model","Main Menu"]
-            },
-            "Commertial solar water heater":{
-              "name":"Select capacity",
-              "key":3,
-              "type":"list",
-              "elements":[100,200,500,">500","Change model","Main Menu"]
-            }
-          }
-        }
-
-      },
-      "Heat Pump water heater":{
-        "key":2,
-        "type":"list",
-        "elements":["Domestic Heat Pump water heater","Commertial Heat Pump water heater","Change product","Main menu"],
-        "flow":{
-          "Domestic Heat Pump water heater":{
-            "name":"Select Domestic Heat Pump water heater",
-            "key":3,
-            "type":"list",
-            "elements":["VDH200","VDH10i","VDH20i","Other","Change Model","Main Menu"],
-            "flow":{
-              "VDH200":{
-                "name":"Select capacity",
-                "key":4,
-                "type":"list",
-                "elements":[100,200,500,">500","Other","Change product","Main menu"]
+  "services offered": {
+    "name": "Main menu",
+    "key": 0,
+    "type": "list",
+    "elements": ["Service Request", "Installation", "Pending Request Status", "Contact Us", "Other"],
+    "description": ["Request for a service of your appliance.", "Raise an installation request for your appliance.", "Get the details of your pending requests", "Want to get in touch with us? Know how to reach us.", "Need something Else? We would love to hear from you."],
+    "flow": {
+      "Service Request": {
+        "name": "Select a product",
+        "key": 1,
+        "type": "list",
+        "elements": ["Water Heater", "Fans", "Solar Water Heater", "Heat Pump water heater", "Other", "Main Menu"],
+        "flow": {
+          "Water Heater": {
+            "name": "Select a water Heater",
+            "key": 2,
+            "type": "list",
+            "elements": ["Splash GI", "Magma GV", "Lyra", "Splash Copper", "Calora", "Lava", "Other", "Change product", "Main Menu"],
+            "flow": {
+              "Splash GI": {
+                "name": "Select capacity",
+                "key": 3,
+                "type": "list",
+                "elements": [1, 3, 6, 10, 15, 25, "Other", "Change Model", "Main Menu"]
               },
-              "VDH10i":{
-                "name":"Select capacity",
-                "key":4,
-                "type":"list",
-                "elements":[100,200,500,">500","Other","Change product","Main menu"]
+              "Magma GV": {
+                "name": "Select capacity",
+                "key": 3,
+                "type": "list",
+                "elements": [1, 3, 6, 10, 15, 25, "Other", "Change Model", "Main Menu"]
+
               },
-              "VDH20i":{
-                "name":"Select capacity",
-                "key":4,
-                "type":"list",
-                "elements":[100,200,500,">500","Other","Change product","Main menu"]
+              "Lyra": {
+                "name": "Select capacity",
+                "key": 3,
+                "type": "list",
+                "elements": [1, 3, 6, 10, 15, 25, "Other", "Change Model", "Main Menu"]
+
+              },
+              "Splash Copper": {
+                "name": "Select capacity",
+                "key": 3,
+                "type": "list",
+                "elements": [1, 3, 6, 10, 15, 25, "Other", "Change Model", "Main Menu"]
+
+              },
+              "Calora": {
+                "name": "Select capacity",
+                "key": 3,
+                "type": "list",
+                "elements": [1, 3, 6, 10, 15, 25, "Other", "Change Model", "Main Menu"]
+
+              },
+              "Lava": {
+                "name": "Select capacity",
+                "key": 3,
+                "type": "list",
+                "elements": [1, 3, 6, 10, 15, 25, "Other", "Change Model", "Main Menu"]
+
               }
-
             }
           },
-          "Commertial Heat Pump water heater":{
-            "name":"Select Commertial Heat Pump water heater",
-            "key":3,
-            "type":"list",
-            "elements":["VDH200","VDH10i","VDH20i","Other","Change Model","Main Menu"],
-            "flow":{
-              "VDH200":{
-                "name":"Select capacity",
-                "key":4,
-                "type":"list",
-                "elements":[100,200,500,">500","Other","Change product","Main menu"]
-              },
-              "VDH10i":{
-                "name":"Select capacity",
-                "key":4,
-                "type":"list",
-                "elements":[100,200,500,">500","Other","Change product","Main menu"]
-              },
-              "VDH20i":{
-                "name":"Select capacity",
-                "key":4,
-                "type":"list",
-                "elements":[100,200,500,">500","Other","Change product","Main menu"]
-              }
-
-            }
-          }
-
-          }
-        }
-      },
-      "Installation":{
-        "name":"Select a product",
-        "key":1,
-        "type":"list",
-        "elements":["Water Heater","Fans","Solar Water Heater","Heat Pump water heater","Other","Main Menu"],
-        "flow":{
-          "Water Heater":{
-            "name":"Select a water Heater",
-            "key":2,
-            "type":"list",
-            "elements":["Splash GI","Magma GV","Lyra","Splash Copper","Calora","Lava","Other","Change product","Main Menu"],
-            "flow":{
-              "Splash GI":{
-              "name":"Select capacity",
-              "key":3,
-              "type":"list",
-              "elements":[1,3,6,10,15,25,"Other","Change Model","Main Menu"]
-            },
-            "Magma GV":{
-              "name":"Select capacity",
-              "key":3,
-              "type":"list",
-              "elements":[1,3,6,10,15,25,"Other","Change Model","Main Menu"]
-
-            },
-            "Lyra":{
-              "name":"Select capacity",
-              "key":3,
-              "type":"list",
-              "elements":[1,3,6,10,15,25,"Other","Change Model","Main Menu"]
-
-            },
-            "Splash Copper":{
-              "name":"Select capacity",
-              "key":3,
-              "type":"list",
-              "elements":[1,3,6,10,15,25,"Other","Change Model","Main Menu"]
-
-            },
-            "Calora":{
-              "name":"Select capacity",
-              "key":3,
-              "type":"list",
-              "elements":[1,3,6,10,15,25,"Other","Change Model","Main Menu"]
-
-            },
-            "Lava":{
-              "name":"Select capacity",
-              "key":3,
-              "type":"list",
-              "elements":[1,3,6,10,15,25,"Other","Change Model","Main Menu"]
-
-            }
-            }
-          },
-          "Fans":{
-            "name":"Select Solar Water Heater",
-            "key":2,
-            "type":"list",
-            "elements":["Ceiling fans","Table fans","Pedestal fans","Wall fans","Exhaust fans","Change product","Main menu"]
+          "Fans": {
+            "name": "Select Solar Water Heater",
+            "key": 2,
+            "type": "list",
+            "elements": ["Ceiling fans", "Table fans", "Pedestal fans", "Wall fans", "Exhaust fans", "Change product", "Main menu"]
 
           },
-          "Solar Water Heater":{
-            "name":"Select Solar Water Heater",
-            "key":2,
-            "type":"list",
-            "elements":["Domestic solar water heater","Commertial solar water heater","Change product","Main Menu"],
-            "flow":{
-              "Domestic solar water heater":{
-                "name":"Select capacity",
-                "key":3,
-                "type":"list",
-                "elements":[100,200,500,">500","Change model","Main Menu"]
+          "Solar Water Heater": {
+            "name": "Select Solar Water Heater",
+            "key": 2,
+            "type": "list",
+            "elements": ["Domestic solar water heater", "Commertial solar water heater", "Change product", "Main Menu"],
+            "flow": {
+              "Domestic solar water heater": {
+                "name": "Select capacity",
+                "key": 3,
+                "type": "list",
+                "elements": [100, 200, 500, ">500", "Change model", "Main Menu"]
               },
-              "Commertial solar water heater":{
-                "name":"Select capacity",
-                "key":3,
-                "type":"list",
-                "elements":[100,200,500,">500","Change model","Main Menu"]
+              "Commertial solar water heater": {
+                "name": "Select capacity",
+                "key": 3,
+                "type": "list",
+                "elements": [100, 200, 500, ">500", "Change model", "Main Menu"]
               }
             }
           }
 
         },
-        "Heat Pump water heater":{
-          "key":2,
-          "type":"list",
-          "elements":["Domestic Heat Pump water heater","Commertial Heat Pump water heater","Change product","Main menu"],
-          "flow":{
-            "Domestic Heat Pump water heater":{
-              "name":"Select Domestic Heat Pump water heater",
-              "key":3,
-              "type":"list",
-              "elements":["VDH200","VDH10i","VDH20i","Other","Change Model","Main Menu"],
-              "flow":{
-                "VDH200":{
-                  "name":"Select capacity",
-                  "key":4,
-                  "type":"list",
-                  "elements":[100,200,500,">500","Other","Change product","Main menu"]
+        "Heat Pump water heater": {
+          "key": 2,
+          "type": "list",
+          "elements": ["Domestic Heat Pump water heater", "Commertial Heat Pump water heater", "Change product", "Main menu"],
+          "flow": {
+            "Domestic Heat Pump water heater": {
+              "name": "Select Domestic Heat Pump water heater",
+              "key": 3,
+              "type": "list",
+              "elements": ["VDH200", "VDH10i", "VDH20i", "Other", "Change Model", "Main Menu"],
+              "flow": {
+                "VDH200": {
+                  "name": "Select capacity",
+                  "key": 4,
+                  "type": "list",
+                  "elements": [100, 200, 500, ">500", "Other", "Change product", "Main menu"]
                 },
-                "VDH10i":{
-                  "name":"Select capacity",
-                  "key":4,
-                  "type":"list",
-                  "elements":[100,200,500,">500","Other","Change product","Main menu"]
+                "VDH10i": {
+                  "name": "Select capacity",
+                  "key": 4,
+                  "type": "list",
+                  "elements": [100, 200, 500, ">500", "Other", "Change product", "Main menu"]
                 },
-                "VDH20i":{
-                  "name":"Select capacity",
-                  "key":4,
-                  "type":"list",
-                  "elements":[100,200,500,">500","Other","Change product","Main menu"]
+                "VDH20i": {
+                  "name": "Select capacity",
+                  "key": 4,
+                  "type": "list",
+                  "elements": [100, 200, 500, ">500", "Other", "Change product", "Main menu"]
                 }
 
               }
             },
-            "Commertial Heat Pump water heater":{
-              "name":"Select Commertial Heat Pump water heater",
-              "key":3,
-              "type":"list",
-              "elements":["VDH200","VDH10i","VDH20i","Other","Change Model","Main Menu"],
-              "flow":{
-                "VDH200":{
-                  "name":"Select capacity",
-                  "key":4,
-                  "type":"list",
-                  "elements":[100,200,500,">500","Other","Change product","Main menu"]
+            "Commertial Heat Pump water heater": {
+              "name": "Select Commertial Heat Pump water heater",
+              "key": 3,
+              "type": "list",
+              "elements": ["VDH200", "VDH10i", "VDH20i", "Other", "Change Model", "Main Menu"],
+              "flow": {
+                "VDH200": {
+                  "name": "Select capacity",
+                  "key": 4,
+                  "type": "list",
+                  "elements": [100, 200, 500, ">500", "Other", "Change product", "Main menu"]
                 },
-                "VDH10i":{
-                  "name":"Select capacity",
-                  "key":4,
-                  "type":"list",
-                  "elements":[100,200,500,">500","Other","Change product","Main menu"]
+                "VDH10i": {
+                  "name": "Select capacity",
+                  "key": 4,
+                  "type": "list",
+                  "elements": [100, 200, 500, ">500", "Other", "Change product", "Main menu"]
                 },
-                "VDH20i":{
-                  "name":"Select capacity",
-                  "key":4,
-                  "type":"list",
-                  "elements":[100,200,500,">500","Other","Change product","Main menu"]
+                "VDH20i": {
+                  "name": "Select capacity",
+                  "key": 4,
+                  "type": "list",
+                  "elements": [100, 200, 500, ">500", "Other", "Change product", "Main menu"]
                 }
 
               }
             }
 
+          }
+        }
+      },
+      "Installation": {
+        "name": "Select a product",
+        "key": 1,
+        "type": "list",
+        "elements": ["Water Heater", "Fans", "Solar Water Heater", "Heat Pump water heater", "Other", "Main Menu"],
+        "flow": {
+          "Water Heater": {
+            "name": "Select a water Heater",
+            "key": 2,
+            "type": "list",
+            "elements": ["Splash GI", "Magma GV", "Lyra", "Splash Copper", "Calora", "Lava", "Other", "Change product", "Main Menu"],
+            "flow": {
+              "Splash GI": {
+                "name": "Select capacity",
+                "key": 3,
+                "type": "list",
+                "elements": [1, 3, 6, 10, 15, 25, "Other", "Change Model", "Main Menu"]
+              },
+              "Magma GV": {
+                "name": "Select capacity",
+                "key": 3,
+                "type": "list",
+                "elements": [1, 3, 6, 10, 15, 25, "Other", "Change Model", "Main Menu"]
+
+              },
+              "Lyra": {
+                "name": "Select capacity",
+                "key": 3,
+                "type": "list",
+                "elements": [1, 3, 6, 10, 15, 25, "Other", "Change Model", "Main Menu"]
+
+              },
+              "Splash Copper": {
+                "name": "Select capacity",
+                "key": 3,
+                "type": "list",
+                "elements": [1, 3, 6, 10, 15, 25, "Other", "Change Model", "Main Menu"]
+
+              },
+              "Calora": {
+                "name": "Select capacity",
+                "key": 3,
+                "type": "list",
+                "elements": [1, 3, 6, 10, 15, 25, "Other", "Change Model", "Main Menu"]
+
+              },
+              "Lava": {
+                "name": "Select capacity",
+                "key": 3,
+                "type": "list",
+                "elements": [1, 3, 6, 10, 15, 25, "Other", "Change Model", "Main Menu"]
+
+              }
+            }
+          },
+          "Fans": {
+            "name": "Select Solar Water Heater",
+            "key": 2,
+            "type": "list",
+            "elements": ["Ceiling fans", "Table fans", "Pedestal fans", "Wall fans", "Exhaust fans", "Change product", "Main menu"]
+
+          },
+          "Solar Water Heater": {
+            "name": "Select Solar Water Heater",
+            "key": 2,
+            "type": "list",
+            "elements": ["Domestic solar water heater", "Commertial solar water heater", "Change product", "Main Menu"],
+            "flow": {
+              "Domestic solar water heater": {
+                "name": "Select capacity",
+                "key": 3,
+                "type": "list",
+                "elements": [100, 200, 500, ">500", "Change model", "Main Menu"]
+              },
+              "Commertial solar water heater": {
+                "name": "Select capacity",
+                "key": 3,
+                "type": "list",
+                "elements": [100, 200, 500, ">500", "Change model", "Main Menu"]
+              }
             }
           }
+
         },
-      "Contact us":{
-        "name":"Choose an option",
-        "key":1,
-        "type":"list",
-        "elements":["Email","Phone","Address","Website","Main menu"],
-        "flow":{
-          "Email":{
-            "key":2,
-            "type":"message",
-            "message":"Hey hi, You can get in touch with us at customercare@venushomeappliances.com / enquiry@venushomeappliances.com."
-          },
-          "Phone":{
-            "key":2,
-            "type":"message",
-            "message":"Hey hi, Call us at- Call Us @ 081 4466 6999, +91-044 - 43401515 & We are also available in whatsapp +91 9884064999"
-          },
-            "Address":{
-              "key":2,
-              "type":"message",
-              "message":"Hey hi, You can visit us at No. 4/993, Kamaraj St, Rajiv Gandhi Salai(OMR), Kottivakkam, Perungudi Post, Chennai-600096, India…"
+        "Heat Pump water heater": {
+          "key": 2,
+          "type": "list",
+          "elements": ["Domestic Heat Pump water heater", "Commertial Heat Pump water heater", "Change product", "Main menu"],
+          "flow": {
+            "Domestic Heat Pump water heater": {
+              "name": "Select Domestic Heat Pump water heater",
+              "key": 3,
+              "type": "list",
+              "elements": ["VDH200", "VDH10i", "VDH20i", "Other", "Change Model", "Main Menu"],
+              "flow": {
+                "VDH200": {
+                  "name": "Select capacity",
+                  "key": 4,
+                  "type": "list",
+                  "elements": [100, 200, 500, ">500", "Other", "Change product", "Main menu"]
+                },
+                "VDH10i": {
+                  "name": "Select capacity",
+                  "key": 4,
+                  "type": "list",
+                  "elements": [100, 200, 500, ">500", "Other", "Change product", "Main menu"]
+                },
+                "VDH20i": {
+                  "name": "Select capacity",
+                  "key": 4,
+                  "type": "list",
+                  "elements": [100, 200, 500, ">500", "Other", "Change product", "Main menu"]
+                }
+
+              }
             },
-            "Website":{
-              "key":2,
-              "type":"message",
-              "message":"Hey hi, Check us at https://www.venushomeappliances.com."
+            "Commertial Heat Pump water heater": {
+              "name": "Select Commertial Heat Pump water heater",
+              "key": 3,
+              "type": "list",
+              "elements": ["VDH200", "VDH10i", "VDH20i", "Other", "Change Model", "Main Menu"],
+              "flow": {
+                "VDH200": {
+                  "name": "Select capacity",
+                  "key": 4,
+                  "type": "list",
+                  "elements": [100, 200, 500, ">500", "Other", "Change product", "Main menu"]
+                },
+                "VDH10i": {
+                  "name": "Select capacity",
+                  "key": 4,
+                  "type": "list",
+                  "elements": [100, 200, 500, ">500", "Other", "Change product", "Main menu"]
+                },
+                "VDH20i": {
+                  "name": "Select capacity",
+                  "key": 4,
+                  "type": "list",
+                  "elements": [100, 200, 500, ">500", "Other", "Change product", "Main menu"]
+                }
+
+              }
             }
 
+          }
+        }
+      },
+      "Contact Us": {
+        "name": "Choose an option",
+        "key": 1,
+        "type": "list",
+        "elements": ["Email", "Phone", "Address", "Website", "Main menu"],
+        "flow": {
+          "Email": {
+            "key": 2,
+            "type": "message",
+            "message": "Hey hi, You can get in touch with us at customercare@venushomeappliances.com / enquiry@venushomeappliances.com."
+          },
+          "Phone": {
+            "key": 2,
+            "type": "message",
+            "message": "Hey hi, Call us at- Call Us @ 081 4466 6999, +91-044 - 43401515 & We are also available in whatsapp +91 9884064999"
+          },
+          "Address": {
+            "key": 2,
+            "type": "message",
+            "message": "Hey hi, You can visit us at No. 4/993, Kamaraj St, Rajiv Gandhi Salai(OMR), Kottivakkam, Perungudi Post, Chennai-600096, India…"
+          },
+          "Website": {
+            "key": 2,
+            "type": "message",
+            "message": "Hey hi, Check us at https://www.venushomeappliances.com."
+          }
         }
       },
       "Pending Request Status": {
-   "key": 1,
-   "name": "Sorry for the inconvinience. Please give your details and I will Follow up.",
-   "type": "message"
- },
- "Others": {
-   "key": 1
- }
-}
+        "key": 1,
+        "name": "Sorry for the inconvinience. Please give your details and I will Follow up.",
+        "type": "message"
+      },
+      "Other": {
+        "key": 1
       }
     }
+  }
+}
