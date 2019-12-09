@@ -2,7 +2,7 @@
 "services offered":{
     "name":"Main menu",
     "key":0,
-    "type":"carousel",
+    "type":"list",
     "elements":["Service Request","Installation","Pending Request Status","Contact Us","Other"],
     "description":["Request for a service of your appliance.","Raise an installation request for your appliance.","Get the details of your pending requests","Want to get in touch with us? Know how to reach us.","Need something Else? We would love to hear from you."],
     "flow":{
@@ -65,7 +65,7 @@
           "name":"Select Solar Water Heater",
           "key":2,
           "type":"list",
-          "elements":["Ceiling fans","Table fans","Pedestal fans","Wall fans","Exhaust fans","Change product","Main menu"],
+          "elements":["Ceiling fans","Table fans","Pedestal fans","Wall fans","Exhaust fans","Change product","Main menu"]
 
         },
         "Solar Water Heater":{
@@ -212,7 +212,7 @@
             "name":"Select Solar Water Heater",
             "key":2,
             "type":"list",
-            "elements":["Ceiling fans","Table fans","Pedestal fans","Wall fans","Exhaust fans","Change product","Main menu"],
+            "elements":["Ceiling fans","Table fans","Pedestal fans","Wall fans","Exhaust fans","Change product","Main menu"]
 
           },
           "Solar Water Heater":{
@@ -337,7 +337,6 @@
  "Others": {
    "key": 1
  }
-},
+}
       }
     }
-  }
